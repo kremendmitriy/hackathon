@@ -16,7 +16,7 @@ const HomePageContainer = ({ className }) => {
         src="https://onlypult.com/blog_uploads/203acb8aadafa63cc52f14b87a85c8a8.png"
         alt="Students"
       />
-      <Button borderRadius="5px" backgroundColor="#ce364c">
+      <Button borderRadius="5px" backgroundColor="#eb465f">
         <Link to="/cards">Смотреть участников</Link>
       </Button>
     </div>

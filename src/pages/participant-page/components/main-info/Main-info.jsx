@@ -2,11 +2,13 @@ import styled from "styled-components";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
-const MainInfoContainer = ({ className }) => {
+
+const MainInfoContainer = ({ className, id, imageUrl, userName, age, aboutUser }) => {
+
   return (
     <div className={className}>
       <div className="image">
-        <img src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Blank&hairColor=BrownDark&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Default&eyebrowType=Default&mouthType=Default&skinColor=Light" />
+        <img src={imageUrl} />
         <div className="network">
           <TelegramIcon />
           <GitHubIcon />
@@ -14,17 +16,11 @@ const MainInfoContainer = ({ className }) => {
         </div>
       </div>
       <div className="main-info">
-        <div className="name">Заголовок: Имя Фамилия</div>
+        <div className="name">{userName}</div>
         <div className="icon"></div>
-        <div className="age">Возраст: Возраст</div>
-        <div className="about">
-          О себе: Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Incidunt id, tempora quod deserunt, omnis minus assumenda voluptates
-          ducimus facilis necessitatibus tenetur asperiores, vero sed voluptate
-          eveniet ea dolorum tempore beatae. Lorem ipsum dolor sit, amet
-          consectetur adipisicing elit. Ex officiis aspernatur beatae itaque
-          dolore aliquam aperiam illum possimus sunt earum!
-        </div>
+        <div className="age">Возраст: {age}</div>
+        <div className="about">О себе: <br/> 
+            {aboutUser}</div>
         <div className="progress-bar">шкала прогресса</div>
       </div>
     </div>
@@ -85,19 +81,19 @@ export const MainInfo = styled(MainInfoContainer)`
   }
 
   & .name {
-    font-size: 20px;
+    font-size: 28px;
     font-weight: bold;
     margin-bottom: 10px;
   }
 
   & .age {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 10px;
   }
 
   & .about {
-    font-size: 14px;
-    margin-bottom: 20px;
+    font-size: 18px;
+    margin-bottom: 22px;
   }
 
   & .progress-bar {
