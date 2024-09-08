@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
-import { HomePage, ParticipantsPage } from './pages';
+import { HomePage, ParticipantsPage, ParticipantPage } from './pages';
+
 import styled from '@emotion/styled';
 import { Navigation } from './components/Navbar';
 
@@ -21,6 +22,7 @@ function App() {
                <Route path="/" element={<HomePage />} />
                <Route path="/cards" element={<ParticipantsPage />} />
                <Route path="/cards/favorites" element={<h1>Favorites</h1>} />
+               <Route path="/cards/page" element={<ParticipantPage />} />
                <Route path="*" element={<h1>Not Found</h1>} />
             </Routes>
          </Content>
