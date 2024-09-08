@@ -18,6 +18,7 @@ const ParticipantPageContainer = ({ className }) => {
     <div className={className}>
       <MainInfo
         id={user.id}
+        role={user.role}
         imageUrl={user.imageUrl}
         userName={user.userName}
         age={user.age}

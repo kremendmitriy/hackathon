@@ -1,12 +1,11 @@
 /** @jsxImportSource @emotion/react */
 
 import userData from "../../db.json";
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-// import FavoriteIcon from "@mui/icons-material/Favorite";
-
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { Link } from "react-router-dom";
 import { Button } from "../components/Button";
 import styled from "@emotion/styled";
+import { Badge } from './../components/Badge';
 
 const ParticipantsPageContainer = ({ className }) => {
   const users = userData.users;
@@ -27,21 +26,23 @@ const ParticipantsPageContainer = ({ className }) => {
                 </Link>
               </div>
               <div className="bages">
-              <FavoriteBorderIcon />
-                {(role === "teamlead" && <div className="bages-teamlead">#TeamLead </div>) ||
-                  (role === "student" && <div className="bages-student">#Student </div>) ||
-                  (role === "npc" && <div className="bages-npc">#NPC </div>)}
-                
+                <FavoriteBorderIcon />
+                <Badge role={role} />
               </div>
             </div>
             <div className="post-card-info">{title}</div>
           </div>
         ))}
+      </div>
+    </div>
+  );
+};
 
 export const ParticipantsPage = styled(ParticipantsPageContainer)`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+
   & a {
     text-decoration: none;
     color: #ddd;
@@ -58,7 +59,7 @@ export const ParticipantsPage = styled(ParticipantsPageContainer)`
     transition: transform 0.2s ease-in-out;
 
     &:hover {
-      transform: translateY(-3px); /* Кнопка поднимется на 3px при наведении */
+      transform: translateY(-3px);
     }
 
     &:focus {
@@ -103,19 +104,4 @@ export const ParticipantsPage = styled(ParticipantsPageContainer)`
     text-align: center;
   }
 
-  & .bages-teamlead {
-   padding: 5px;
-   border-radius: 5px;
-   background-color: #f1a6a6
-  }
-  & .bages-student {
-   padding: 5px;
-   border-radius: 5px;
-   background-color: #a1eead
-  }
-  & .bages-npc {
-   padding: 5px;
-   border-radius: 5px;
-   background-color: #9d9d9d
-  }
 `;
