@@ -5,9 +5,9 @@ const HomePageContainer = ({ className }) => {
     <div className={className}>
       <h1>Привет!</h1>
       <div className="text">
-        Мы — студенты Result University, и мы решили стать разработчиками.<br /> Мы
-        выбрали этот путь, потому что верим в силу технологий и их способность
-        менять мир к лучшему. <br />
+        Мы — студенты Result University, и мы решили стать разработчиками.
+        <br /> Мы выбрали этот путь, потому что верим в силу технологий и их
+        способность менять мир к лучшему. <br />
         Здесь ты сможешь познакомиться с нами и узнать больше о наших навыках.
       </div>
       <img
@@ -22,6 +22,8 @@ const HomePageContainer = ({ className }) => {
 export const HomePage = styled(HomePageContainer)`
   display: flex;
   flex-direction: column;
+  max-width: 100%;
+  max-height: 100%;
   align-items: center;
   background-color: #f9f9f9;
   padding: 50px;
@@ -42,7 +44,7 @@ export const HomePage = styled(HomePageContainer)`
   }
 
   & img {
-    max-width: 100%;
+    width: 500px;
     height: auto;
     margin-bottom: 30px;
   }
