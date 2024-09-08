@@ -1,4 +1,5 @@
-
+import { Button } from "../components/Button";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const HomePageContainer = ({ className }) => {
@@ -15,7 +16,9 @@ const HomePageContainer = ({ className }) => {
         src="https://onlypult.com/blog_uploads/203acb8aadafa63cc52f14b87a85c8a8.png"
         alt="Students"
       />
-      <button className="meet-button">Давай знакомиться</button>
+      <Button borderRadius="5px" backgroundColor="#ce364c">
+        <Link to="/cards">Смотреть участников</Link>
+      </Button>
     </div>
   );
 };
@@ -35,7 +38,11 @@ export const HomePage = styled(HomePageContainer)`
     color: #333;
     margin-bottom: 20px;
   }
-
+  a {
+    color: #fdfdfd;
+    padding: 10px 5px;
+    text-decoration: none;
+  }
   & .text {
     max-width: 900px;
     font-size: 18px;
@@ -48,20 +55,5 @@ export const HomePage = styled(HomePageContainer)`
     width: 500px;
     height: auto;
     margin-bottom: 30px;
-  }
-
-  & .meet-button {
-    font-size: 18px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: #0056b3;
-    }
   }
 `;
