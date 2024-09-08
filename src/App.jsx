@@ -2,20 +2,30 @@ import { Routes, Route } from 'react-router-dom';
 import { HomePage, ParticipantsPage } from './pages';
 import styled from '@emotion/styled';
 import { Navigation } from './components/Navbar';
+import './App.css';
 
 const MainContainer = styled.div`
    display: flex;
+   min-height: 100vh;
+   background-color: #f9f9f9;
 `;
 
+const NavigationContainer = styled.div`
+   width: 220px;
+   background-color: #fff;
+   display: flex;
+   flex-direction: column;
+`;
 const Content = styled.div`
-   margin-left: 200px;
-   padding: 20px;
+   flex-grow: 1;
 `;
 
 function App() {
    return (
       <MainContainer>
-         <Navigation />
+         <NavigationContainer>
+            <Navigation />
+         </NavigationContainer>
          <Content>
             <Routes>
                <Route path="/" element={<HomePage />} />
