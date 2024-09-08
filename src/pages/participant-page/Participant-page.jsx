@@ -1,12 +1,30 @@
 import styled from "styled-components";
+import { useParams } from "react-router-dom";
 import { DevelopmentInfo, MainInfo, ProgressForCard } from "./components";
+import userData from "../../../db.json";
 
 const ParticipantPageContainer = ({ className }) => {
+  const { id } = useParams();
+  const user = userData.users.find((user) => user.id === parseInt(id));
+
+  if (!user) {
+    return <div>Пользователь не найден</div>;
+  }
+  const developmentData = {
+    tasks: user.tasks,
+  };
+
   return (
     <div className={className}>
-      <MainInfo />
+      <MainInfo
+        id={user.id}
+        imageUrl={user.imageUrl}
+        userName={user.userName}
+        age={user.age}
+        aboutUser={user.aboutUser}
+      />
       <ProgressForCard />
-      <DevelopmentInfo />
+      <DevelopmentInfo data={developmentData} />
     </div>
   );
 };

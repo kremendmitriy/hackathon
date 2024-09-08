@@ -1,20 +1,14 @@
 import styled from "styled-components";
 
-const DevelopmentInfoContainer = ({ className }) => {
+const DevelopmentInfoContainer = ({ className, data }) => {
+    const { tasks } = data;
   return (
     <div className={className}>
       <div className="main-info">
-        <div className="what-you-do">Что ты сделал для хип хопа: </div>
+        <div className="what-you-do">Что было сделано мной в проекте? </div>
 
-        <div className="about">
-          О себе: Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Incidunt id, tempora quod deserunt, omnis minus assumenda voluptates
-          ducimus facilis necessitatibus tenetur asperiores, vero sed voluptate
-          eveniet ea dolorum tempore beatae. Lorem ipsum dolor sit, amet
-          consectetur adipisicing elit. Ex officiis aspernatur beatae itaque
-          dolore aliquam aperiam illum possimus sunt earum! Lorem ipsum dolor
-          sit amet consectetur adipisicing elit. Eum deserunt perferendis
-          incidunt beatae ea velit quisquam animi aperiam facilis cum!
+        <div className="tasks">
+          {tasks}
         </div>
       </div>
     </div>
@@ -51,13 +45,13 @@ export const DevelopmentInfo = styled(DevelopmentInfoContainer)`
   }
 
   & .what-you-do {
-    font-size: 20px;
+    font-size: 28px;
     font-weight: bold;
     margin-bottom: 10px;
   }
 
-  & .about {
-    font-size: 14px;
+  & .tasks {
+    font-size: 20px;
     margin-bottom: 20px;
   }
 `;
