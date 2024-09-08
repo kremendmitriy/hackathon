@@ -43,11 +43,11 @@ const CircleContainer = styled.div`
    width: 80px;
    height: 80px;
    border-radius: 50%;
-   background-color: #e0e0e0; // Light gray background
+   background-color: #e0e0e0;
    display: flex;
    align-items: center;
    justify-content: center;
-   border: 4px solid #ccc; // Border in a darker gray
+   border: 4px solid #ccc;
 `;
 
 const CircleFill = styled.div`
@@ -66,14 +66,14 @@ const PercentageText = styled.div`
    width: 40px;
    height: 40px;
    border-radius: 50%;
-   background-color: #fff; // Background color for percentage circle
+   background-color: #fff;
    display: flex;
    align-items: center;
    justify-content: center;
    color: #333;
    font-weight: bold;
    font-size: 14px;
-   border: 2px solid #ccc; // Border color to match the circle
+   border: 2px solid #ccc;
 `;
 
 export const Progress = () => {

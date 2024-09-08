@@ -37,10 +37,6 @@ const ParticipantsPageContainer = ({ className }) => {
             <div className="post-card-info">{title}</div>
           </div>
         ))}
-      </div>
-    </div>
-  );
-};
 
 export const ParticipantsPage = styled(ParticipantsPageContainer)`
   display: flex;

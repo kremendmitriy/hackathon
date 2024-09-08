@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { HomePage, ParticipantsPage, ParticipantPage } from "./pages";
 
+
 import styled from "@emotion/styled";
 import { Navigation } from "./components/Navbar";
 
