@@ -2,26 +2,48 @@ import styled from "styled-components";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
-
-const MainInfoContainer = ({ className, id, imageUrl, userName, age, aboutUser }) => {
-
+import { Badge } from "../../../../components/Badge";
+import { TotalDeveloperProgress } from "../../../../components/ProgressBars/TotalDevProgress";
+const MainInfoContainer = ({
+  className,
+  id,
+  imageUrl,
+  userName,
+  age,
+  aboutUser,
+  role,
+}) => {
   return (
     <div className={className}>
       <div className="image">
         <img src={imageUrl} />
         <div className="network">
-          <TelegramIcon />
-          <GitHubIcon />
+          <a href="https://www.telegram.com/yourprofile">
+            <TelegramIcon />
+          </a>
+          <a href="https://github.com/yourprofile">
+           <GitHubIcon /> 
+          </a>
+          <a href="https://www.instagram.com/yourprofile">
           <InstagramIcon />
+          </a>
+
+          
+          
         </div>
       </div>
       <div className="main-info">
+        <Badge role={role} />
         <div className="name">{userName}</div>
         <div className="icon"></div>
         <div className="age">Возраст: {age}</div>
-        <div className="about">О себе: <br/> 
-            {aboutUser}</div>
-        <div className="progress-bar">шкала прогресса</div>
+        <div className="about">
+          О себе: <br />
+          {aboutUser}
+        </div>
+        <div className="progress-bar">
+        <TotalDeveloperProgress />
+        </div>
       </div>
     </div>
   );
@@ -36,6 +58,7 @@ export const MainInfo = styled(MainInfoContainer)`
   background: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 
   & .image {
     flex: 0 0 30%;
@@ -58,7 +81,6 @@ export const MainInfo = styled(MainInfoContainer)`
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    color: #454545;
 
     & > * {
       margin-right: 15px;
@@ -66,6 +88,11 @@ export const MainInfo = styled(MainInfoContainer)`
 
     & > *:last-child {
       margin-right: 0;
+    }
+
+    & > a {
+        text-decoration: none;
+        color: #454545;
     }
   }
 
@@ -98,16 +125,11 @@ export const MainInfo = styled(MainInfoContainer)`
 
   & .progress-bar {
     display: flex;
-    justify-content: center;
     align-items: center;
+    font-size: 21px;
     width: 95%;
     height: 20px;
-    border: 1px solid #b32828;
-    border-radius: 10px;
-    background-color: #d96868;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 0 10px;
-    text-align: center;
-    color: #fff;
+
   }
 `;
