@@ -1,8 +1,8 @@
-import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
 import { DevelopmentInfo, MainInfo, ProgressForCard } from './components';
-import userData from '../../../db.json';
 import { SliderWithText } from '../../components/SliderWithText';
+import userData from '../../../db.json';
+import styled from 'styled-components';
 
 const ParticipantPageContainer = ({ className }) => {
    const { id } = useParams();

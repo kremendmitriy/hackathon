@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Card } from '../components/Card';
-
 import userData from '../../db.json';
 import styled from '@emotion/styled';
 

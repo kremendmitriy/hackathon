@@ -27,7 +27,6 @@ export const SliderWithText = styled(SliderWithTextContainer)`
    background: #2c2c2c;
    border-radius: 12px;
    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-
    border: 1px solid #444;
 
    & .text-section {
