@@ -8,12 +8,14 @@ import { Navigation } from './components/Navbar';
 
 import { Routes, Route } from 'react-router-dom';
 import styled from '@emotion/styled';
+import { BreadcrumbsComponent } from './components/Breadcrumbs';
 
 function App() {
    return (
       <MainContainer>
          <Navigation />
          <Content>
+            <BreadcrumbsComponent />
             <Routes>
                <Route path="/" element={<HomePage />} />
                <Route path="/cards" element={<ParticipantsPage />} />

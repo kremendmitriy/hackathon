@@ -1,14 +1,21 @@
 import styled from 'styled-components';
 
-// TEST DATA
-const progressData = [
-   { language: 'React', progress: 80 },
-   { language: 'JavaScript', progress: 70 },
-   { language: 'HTML', progress: 90 },
-   { language: 'CSS', progress: 85 },
-   { language: 'Next.js', progress: 75 },
-];
-//
+export const TotalDeveloperProgress = ({ skillsData }) => {
+   const totalProgress = skillsData.reduce(
+      (acc, item) => acc + item.progress,
+      0
+   );
+   const averageProgress = Math.round(totalProgress / skillsData.length);
+
+   return (
+      <ProgressContainer>
+         <ProgressText>{`Developer Progress: ${averageProgress}%`}</ProgressText>
+         <ProgressBarWrapper>
+            <ProgressBar progress={averageProgress} />
+         </ProgressBarWrapper>
+      </ProgressContainer>
+   );
+};
 
 const ProgressContainer = styled.div`
    display: flex;
@@ -37,20 +44,3 @@ const ProgressText = styled.span`
    color: #333;
    margin-top: 6px;
 `;
-
-export const TotalDeveloperProgress = () => {
-   const totalProgress = progressData.reduce(
-      (acc, item) => acc + item.progress,
-      0
-   );
-   const averageProgress = Math.round(totalProgress / progressData.length);
-
-   return (
-      <ProgressContainer>
-         <ProgressText>{`Developer Progress: ${averageProgress}%`}</ProgressText>
-         <ProgressBarWrapper>
-            <ProgressBar progress={averageProgress} />
-         </ProgressBarWrapper>
-      </ProgressContainer>
-   );
-};
