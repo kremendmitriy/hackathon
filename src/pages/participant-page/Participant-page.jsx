@@ -16,15 +16,8 @@ const ParticipantPageContainer = ({ className }) => {
 
    return (
       <div className={className}>
-         <MainInfo
-            id={user.id}
-            role={user.role}
-            imageUrl={user.imageUrl}
-            userName={user.userName}
-            age={user.age}
-            aboutUser={user.aboutUser}
-         />
-         <ProgressForCard />
+         <MainInfo user={user} />
+         <ProgressForCard userSkills={user.skills} />
          <DevelopmentInfo data={developmentData} />
       </div>
    );

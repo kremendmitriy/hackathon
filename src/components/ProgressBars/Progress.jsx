@@ -1,12 +1,4 @@
 import styled from '@emotion/styled';
-// TEST DATE
-const skillsData = [
-   { name: 'React', progress: 75 },
-   { name: 'JavaScript', progress: 85 },
-   { name: 'HTML', progress: 90 },
-   { name: 'CSS', progress: 80 },
-   { name: 'NextJS', progress: 65 },
-];
 
 const languageColors = {
    React: '#61DAFB',
@@ -15,8 +7,24 @@ const languageColors = {
    CSS: '#1572B6',
    NextJS: '#000000',
 };
-//
-
+export const Progress = ({ skillsData }) => {
+   return (
+      <ProgressContainer>
+         {skillsData.map((skill) => (
+            <Skill key={skill.name}>
+               <SkillName>{skill.name}</SkillName>
+               <CircleContainer>
+                  <CircleFill
+                     color={languageColors[skill.name]}
+                     progress={skill.progress}
+                  />
+                  <PercentageText>{skill.progress}%</PercentageText>
+               </CircleContainer>
+            </Skill>
+         ))}
+      </ProgressContainer>
+   );
+};
 const ProgressContainer = styled.div`
    display: flex;
    flex-wrap: wrap;
@@ -75,22 +83,3 @@ const PercentageText = styled.div`
    font-size: 14px;
    border: 2px solid #ccc;
 `;
-
-export const Progress = () => {
-   return (
-      <ProgressContainer>
-         {skillsData.map((skill) => (
-            <Skill key={skill.name}>
-               <SkillName>{skill.name}</SkillName>
-               <CircleContainer>
-                  <CircleFill
-                     color={languageColors[skill.name]}
-                     progress={skill.progress}
-                  />
-                  <PercentageText>{skill.progress}%</PercentageText>
-               </CircleContainer>
-            </Skill>
-         ))}
-      </ProgressContainer>
-   );
-};
