@@ -33,8 +33,8 @@ export const NotFound = styled(NotFoundContainer)`
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   height: 500px;
-   width: 500px;
+   height: 90vh;
+   width: 96%;
    text-align: center;
    position: relative;
 
@@ -69,7 +69,7 @@ export const NotFound = styled(NotFoundContainer)`
    }
 
    & h1 {
-      font-size: 80px;
+      font-size: 50px;
    }
 
    & h2 {
