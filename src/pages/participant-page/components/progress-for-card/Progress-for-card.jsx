@@ -1,5 +1,6 @@
-import styled from 'styled-components';
 import { Progress } from '../../../../components/ProgressBars/Progress';
+import styled from 'styled-components';
+
 const ProgressForCardConteiner = ({ className, userSkills }) => {
    return (
       <div className={className}>

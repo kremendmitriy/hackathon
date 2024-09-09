@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom';
 import {
    HomePage,
    ParticipantsPage,
@@ -6,13 +7,11 @@ import {
    NotFound,
 } from './pages';
 import { Navigation } from './components/Navbar';
-import './App.css';
-
-import { Routes, Route } from 'react-router-dom';
-import styled from '@emotion/styled';
 import { BreadcrumbsComponent } from './components/Breadcrumbs';
+import './App.css';
+import styled from '@emotion/styled';
 
-function App() {
+const App = () => {
    return (
       <MainContainer>
          <Navigation />

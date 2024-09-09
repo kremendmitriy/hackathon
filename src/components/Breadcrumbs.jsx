@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
-import { Breadcrumbs, Link, Typography } from '@mui/material';
 import { useLocation, Link as RouterLink } from 'react-router-dom';
-import userData from '../../db.json'; // Импортируем данные о пользователях
+import { Breadcrumbs, Link, Typography } from '@mui/material';
+import userData from '../../db.json';
 
 export const BreadcrumbsComponent = () => {
    const location = useLocation();

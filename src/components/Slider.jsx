@@ -37,7 +37,7 @@ export const CarouselComponent = ({ projectsImg }) => {
                   <DotGroup className="dot-group" />
                   <ButtonNext className="btn-arrow">
                      <ArrowRight />
-                  </ButtonNext>
+                  </ButtonNext >
                </ButtonPanel>
             </CarouselProvider>
          </CarouselBox>
@@ -98,6 +98,8 @@ const ButtonPanel = styled.div`
    }
 
    .btn-arrow:hover {
+   
+    //   transform: rotate(180deg);
       transform: scale(1.2);
    }
 

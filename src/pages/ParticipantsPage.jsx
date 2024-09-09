@@ -1,7 +1,5 @@
-/** @jsxImportSource @emotion/react */
 import { useState } from 'react';
 import { Card } from '../components/Card';
-
 import userData from '../../db.json';
 import styled from '@emotion/styled';
 
@@ -43,6 +41,7 @@ const ParticipantsPageContainer = ({ className }) => {
       </div>
    );
 };
+
 export const ParticipantsPage = styled(ParticipantsPageContainer)`
    display: flex;
    justify-content: space-between;

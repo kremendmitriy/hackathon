@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/** @jsxImportSource @emotion/react */
 import styled from '@emotion/styled';
 
 const ButtonFunctional = ({
@@ -18,6 +16,5 @@ export const Button = styled(ButtonFunctional)`
    height: 40px;
    border: 1px solid grey;
    border-radius: ${({ borderRadius = '0' }) => borderRadius};
-
    background-color: ${({ backgroundColor = 'grey' }) => backgroundColor};
 `;

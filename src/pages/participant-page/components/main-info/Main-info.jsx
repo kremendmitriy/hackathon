@@ -1,9 +1,9 @@
+import { Badge } from '../../../../components/Badge';
+import { TotalDeveloperProgress } from '../../../../components/ProgressBars/TotalDevProgress';
 import styled from 'styled-components';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import { Badge } from '../../../../components/Badge';
-import { TotalDeveloperProgress } from '../../../../components/ProgressBars/TotalDevProgress';
 
 const MainInfoContainer = ({ className, user }) => {
    return (
@@ -40,7 +40,6 @@ const MainInfoContainer = ({ className, user }) => {
 
 export const MainInfo = styled(MainInfoContainer)`
    display: flex;
-
    justify-content: space-between;
    padding: 50px 30px;
    max-width: 1000px;

@@ -25,6 +25,7 @@ export const Progress = ({ skillsData }) => {
       </ProgressContainer>
    );
 };
+
 const ProgressContainer = styled.div`
    display: flex;
    flex-wrap: wrap;

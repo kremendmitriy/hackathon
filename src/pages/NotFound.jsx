@@ -1,6 +1,6 @@
-import { styled } from '@mui/material';
-import { Button } from '../components/Button';
 import { Link } from 'react-router-dom';
+import { Button } from '../components/Button';
+import { styled } from '@mui/material';
 
 const NotFoundContainer = ({ className }) => {
    return (
@@ -33,8 +33,8 @@ export const NotFound = styled(NotFoundContainer)`
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   height: 500px;
-   width: 500px;
+   height: 90vh;
+   width: 96%;
    text-align: center;
    position: relative;
 
@@ -44,7 +44,7 @@ export const NotFound = styled(NotFoundContainer)`
    }
 
    & .title {
-      position: fixed;
+      // position: fixed;
       top: -10px;
       margin-top: 0;
       z-index: 1000;
@@ -69,7 +69,7 @@ export const NotFound = styled(NotFoundContainer)`
    }
 
    & h1 {
-      font-size: 80px;
+      font-size: 50px;
    }
 
    & h2 {
