@@ -1,10 +1,16 @@
 /** @jsxImportSource @emotion/react */
 import { Breadcrumbs, Link, Typography } from '@mui/material';
 import { useLocation, Link as RouterLink } from 'react-router-dom';
+import userData from '../../db.json'; // Импортируем данные о пользователях
 
 export const BreadcrumbsComponent = () => {
    const location = useLocation();
    const pathnames = location.pathname.split('/').filter((x) => x);
+
+   const getUserNameById = (id) => {
+      const user = userData.users.find((user) => user.id === parseInt(id));
+      return user ? user.userName : id;
+   };
 
    return (
       <Breadcrumbs aria-label="breadcrumb">
@@ -15,13 +21,18 @@ export const BreadcrumbsComponent = () => {
             const last = index === pathnames.length - 1;
             const to = `/${pathnames.slice(0, index + 1).join('/')}`;
 
+            const displayName =
+               last && pathnames[index] && !isNaN(pathnames[index])
+                  ? getUserNameById(pathnames[index])
+                  : name.charAt(0).toUpperCase() + name.slice(1);
+
             return last ? (
                <Typography color="textPrimary" key={to}>
-                  {name}
+                  {displayName}
                </Typography>
             ) : (
                <Link component={RouterLink} to={to} color="inherit" key={to}>
-                  {name}
+                  {displayName}
                </Link>
             );
          })}

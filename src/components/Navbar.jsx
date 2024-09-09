@@ -1,19 +1,20 @@
 import styled from '@emotion/styled';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export const Navigation = () => {
    return (
       <Sidebar>
-         <h2>Navigation</h2>
          <NavList>
             <NavItem>
-               <Link to="/">Home</Link>
+               <StyledLink to="/" end>
+                  Home
+               </StyledLink>
             </NavItem>
             <NavItem>
-               <Link to="/cards">Cards</Link>
+               <StyledLink to="/cards">Cards</StyledLink>
             </NavItem>
             <NavItem>
-               <Link to="/cards/favorites">Favorites</Link>
+               <StyledLink to="/cards/favorites">Favorites</StyledLink>
             </NavItem>
          </NavList>
       </Sidebar>
@@ -21,28 +22,47 @@ export const Navigation = () => {
 };
 
 const Sidebar = styled.div`
-   width: 180px;
+   width: 220px;
    height: 100vh;
-   background-color: #f4f4f4;
+   background: #2f2f2f; // Темный серый цвет
    padding: 20px;
-   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
    position: fixed;
    left: 0;
    top: 0;
    display: flex;
    flex-direction: column;
-   gap: 15px;
+   gap: 20px;
+   border-radius: 0 15px 15px 0;
 `;
+
 const NavList = styled.ul`
    list-style: none;
    padding: 0;
+   margin: 0;
 `;
+
 const NavItem = styled.li`
-   a {
-      text-decoration: none;
-      color: #333;
-      &:hover {
-         text-decoration: underline;
-      }
+   margin: 10px 0;
+`;
+
+const StyledLink = styled(NavLink)`
+   text-decoration: none;
+   color: #e0e0e0; // Светло-серый цвет для текста
+   font-size: 16px;
+   font-weight: 500;
+   padding: 10px 15px;
+   border-radius: 5px;
+   display: block;
+   transition: background-color 0.3s ease, color 0.3s ease;
+
+   &.active {
+      background-color: #555555;
+      color: #ffffff;
+   }
+
+   &:hover {
+      background-color: #444444;
+      color: #ffffff;
    }
 `;

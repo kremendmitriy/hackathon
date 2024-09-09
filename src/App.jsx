@@ -5,6 +5,7 @@ import {
    FavoritesPage,
 } from './pages';
 import { Navigation } from './components/Navbar';
+import './App.css';
 
 import { Routes, Route } from 'react-router-dom';
 import styled from '@emotion/styled';
@@ -31,9 +32,13 @@ export default App;
 
 const MainContainer = styled.div`
    display: flex;
+   height: 100vh; // Убедитесь, что контейнер занимает всю высоту
 `;
 
 const Content = styled.div`
-   margin-left: 200px;
-   padding: 20px;
+   margin-left: 300px;
+
+   width: calc(100% - 300px);
+   background-color: #f8f8f8;
+   overflow-y: auto;
 `;

@@ -25,9 +25,7 @@ const ParticipantPageContainer = ({ className }) => {
 
 export const ParticipantPage = styled(ParticipantPageContainer)`
    display: flex;
-   width: 1200px;
    flex-direction: column;
    align-items: center;
-   padding: 50px;
    margin-top: 20px;
 `;
