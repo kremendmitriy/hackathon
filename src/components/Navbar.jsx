@@ -1,6 +1,24 @@
-/** @jsxImportSource @emotion/react */
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
+
+export const Navigation = () => {
+   return (
+      <Sidebar>
+         <h2>Navigation</h2>
+         <NavList>
+            <NavItem>
+               <Link to="/">Home</Link>
+            </NavItem>
+            <NavItem>
+               <Link to="/cards">Cards</Link>
+            </NavItem>
+            <NavItem>
+               <Link to="/cards/favorites">Favorites</Link>
+            </NavItem>
+         </NavList>
+      </Sidebar>
+   );
+};
 
 const Sidebar = styled.div`
    width: 180px;
@@ -28,22 +46,3 @@ const NavItem = styled.li`
       }
    }
 `;
-
-export const Navigation = () => {
-   return (
-      <Sidebar>
-         <h2>Navigation</h2>
-         <NavList>
-            <NavItem>
-               <Link to="/">Home</Link>
-            </NavItem>
-            <NavItem>
-               <Link to="/cards">Cards</Link>
-            </NavItem>
-            <NavItem>
-               <Link to="/cards/favorites">Favorites</Link>
-            </NavItem>
-         </NavList>
-      </Sidebar>
-   );
-};
