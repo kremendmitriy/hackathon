@@ -3,6 +3,7 @@ import {
    ParticipantsPage,
    ParticipantPage,
    FavoritesPage,
+   NotFound,
 } from './pages';
 import { Navigation } from './components/Navbar';
 import './App.css';
@@ -22,7 +23,7 @@ function App() {
                <Route path="/cards" element={<ParticipantsPage />} />
                <Route path="/cards/favorites" element={<FavoritesPage />} />
                <Route path="/cards/:id" element={<ParticipantPage />} />
-               <Route path="*" element={<h1>Not Found</h1>} />
+               <Route path="*" element={<NotFound />} />
             </Routes>
          </Content>
       </MainContainer>
@@ -32,7 +33,8 @@ export default App;
 
 const MainContainer = styled.div`
    display: flex;
-   height: 100vh; // Убедитесь, что контейнер занимает всю высоту
+   height: 100vh;
+   overflow: hidden;
 `;
 
 const Content = styled.div`
