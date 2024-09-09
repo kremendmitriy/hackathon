@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
 import { DevelopmentInfo, MainInfo, ProgressForCard } from './components';
 import userData from '../../../db.json';
+import { SliderWithText } from '../../components/SliderWithText';
 
 const ParticipantPageContainer = ({ className }) => {
    const { id } = useParams();
@@ -19,6 +20,10 @@ const ParticipantPageContainer = ({ className }) => {
          <MainInfo user={user} />
          <ProgressForCard userSkills={user.skills} />
          <DevelopmentInfo data={developmentData} />
+         <SliderWithText
+            textContent={user.projectDescription}
+            projectsImg={user.projects}
+         />
       </div>
    );
 };
@@ -27,5 +32,5 @@ export const ParticipantPage = styled(ParticipantPageContainer)`
    display: flex;
    flex-direction: column;
    align-items: center;
-   margin-top: 20px;
+   margin-top: 30px;
 `;

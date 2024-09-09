@@ -15,13 +15,19 @@
             { "name": "HTML", "progress": 90 },
             { "name": "CSS", "progress": 80 },
             { "name": "NextJS", "progress": 65 }
-         ]
+         ],
+         "projects": [
+            "https://i.pinimg.com/564x/2d/b7/dc/2db7dcdeb76c699ede1d8f7064f962cd.jpg",
+            "https://i.pinimg.com/564x/41/97/61/419761eb5142715cd6019a2370fe8294.jpg",
+            "https://i.pinimg.com/564x/65/06/a7/6506a7ec9b598a17a2e372bf930834fc.jpg"
+         ],
+         "projectDescription": "Я создаю адаптивные и визуально привлекательные веб-приложения, с акцентом на пользовательский опыт и современные анимации. Мои проекты отличаются качественным дизайном и эффективной версткой, что обеспечивает удобство и интерактивность для пользователей."
       },
       {
          "id": 2,
          "userName": "Дмитрий Кремень",
          "role": "teamlead",
-         "age": "?",
+         "age": "23",
          "imageUrl": "https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortRound&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Side&eyebrowType=Angry&mouthType=Smile&skinColor=Pale",
          "aboutUser": "Я увлекаюсь машинным обучением и работаю над созданием умных алгоритмов, которые могут решать сложные задачи. Моя цель — применить искусственный интеллект в реальных проектах для улучшения жизни людей. В свободное время изучаю новые языки программирования и играю в шахматы. Люблю разгадывать головоломки и всегда стремлюсь к совершенству в своем деле.",
          "title": "Пришел в разработку, потому что искусственный интеллект — это будущее, которое я хочу создавать.",
@@ -32,7 +38,13 @@
             { "name": "HTML", "progress": 75 },
             { "name": "CSS", "progress": 70 },
             { "name": "NextJS", "progress": 60 }
-         ]
+         ],
+         "projects": [
+            "https://i.pinimg.com/564x/bf/16/66/bf1666e59674775e75f2e57342c55cb3.jpg",
+            "https://i.pinimg.com/564x/6c/48/7e/6c487e8674e4adc995439c401d9bf3b4.jpg",
+            "https://i.pinimg.com/564x/b1/73/9b/b1739b5a5820f26d9710d1368763cd4f.jpg"
+         ],
+         "projectDescription": "Разрабатываю комплексные архитектурные решения для приложений, обеспечивая их масштабируемость и гибкость. Мои проекты включают разработку логики приложения, интеграцию фронтенда с бэкендом и оптимизацию кода для повышения производительности."
       },
       {
          "id": 3,
@@ -49,7 +61,13 @@
             { "name": "HTML", "progress": 85 },
             { "name": "CSS", "progress": 75 },
             { "name": "NextJS", "progress": 60 }
-         ]
+         ],
+         "projects": [
+            "https://i.pinimg.com/564x/73/26/e0/7326e0d56596a2ded8de8397b27e8742.jpg",
+            "https://i.pinimg.com/564x/fa/c3/e0/fac3e0e90af614be4ab0f045b2a26703.jpg",
+            "https://i.pinimg.com/736x/a2/12/53/a21253f11108d6f0151829bd45c800cd.jpg"
+         ],
+         "projectDescription": "Мои проекты в мобильной разработке включают создание интуитивно понятных интерфейсов и настройку функциональных элементов для улучшения пользовательского опыта. Я фокусируюсь на адаптивности и стабильности приложений на разных устройствах."
       },
       {
          "id": 4,
@@ -66,7 +84,13 @@
             { "name": "HTML", "progress": 75 },
             { "name": "CSS", "progress": 60 },
             { "name": "NextJS", "progress": 50 }
-         ]
+         ],
+         "projects": [
+            "https://i.pinimg.com/564x/ed/06/a3/ed06a37f66cd88262b589c24c757e6d0.jpg",
+            "https://i.pinimg.com/564x/fd/be/38/fdbe3894459e8b70bf9fe2015a3c538c.jpg",
+            "https://i.pinimg.com/564x/36/dc/48/36dc48bc8cc43fa7e442762402aa42b4.jpg"
+         ],
+         "projectDescription": "В моих проектах я занимаюсь разработкой надежной backend-логики и интеграцией с базами данных. Обеспечиваю безопасность данных, настройку API и взаимодействие между фронтендом и бэкендом для улучшения функциональности приложений."
       },
       {
          "id": 5,
@@ -83,7 +107,13 @@
             { "name": "HTML", "progress": 70 },
             { "name": "CSS", "progress": 60 },
             { "name": "NextJS", "progress": 55 }
-         ]
+         ],
+         "projects": [
+            "https://i.pinimg.com/564x/ca/ed/d3/caedd379d119716dcb109d23a9792cf0.jpg",
+            "https://i.pinimg.com/736x/09/06/63/090663458260e92c44594e7ae91da32d.jpg",
+            "https://i.pinimg.com/564x/fc/e3/aa/fce3aa91edc15484bcc54b2933b26b35.jpg"
+         ],
+         "projectDescription": "В моих проектах в разработке игр акцент сделан на создание технологически продвинутых решений и интеграцию различных систем. Мои работы включают разработку backend-логики, настройку API и системы авторизации, а также тестирование и отладку серверной части."
       },
       {
          "id": 6,
@@ -100,7 +130,13 @@
             { "name": "HTML", "progress": 90 },
             { "name": "CSS", "progress": 85 },
             { "name": "NextJS", "progress": 70 }
-         ]
+         ],
+         "projects": [
+            "https://i.pinimg.com/564x/71/e1/e5/71e1e5baa875cf25e2888a783944e4c9.jpg",
+            "https://i.pinimg.com/736x/e0/3a/b9/e03ab905b889e76b6a31b9d2630252bc.jpg",
+            "https://i.pinimg.com/736x/8b/86/00/8b860016d5871071a6f760d0578c50f7.jpg"
+         ],
+         "projectDescription": "Мои проекты в веб-разработке включают создание макетов и прототипов, их реализацию в коде и интеграцию с API. Я акцентирую внимание на тестировании, улучшении пользовательского опыта и дизайне, чтобы обеспечить качество и функциональность интерфейсов."
       }
    ]
 }

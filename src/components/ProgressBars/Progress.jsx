@@ -43,7 +43,7 @@ const Skill = styled.div`
 const SkillName = styled.div`
    margin-bottom: 10px;
    font-weight: bold;
-   color: #333;
+   color: #fff;
 `;
 
 const CircleContainer = styled.div`
