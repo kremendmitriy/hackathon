@@ -71,12 +71,13 @@ export const Card = styled(CardContainerNew)`
    }
 
    & .cards {
-      width: 400px;
+      width: 500px;
       padding: 20px;
       min-height: 190px;
       margin: 20px 15px;
       border-radius: 8px;
-      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+      background-color: #d3d3d3;
    }
 
    & .card-info {
